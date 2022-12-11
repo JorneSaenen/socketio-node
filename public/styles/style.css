@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, h3, h4 {
+  text-align: center;
+}
+
+
+.messages {
+  width: 300px;
+  margin: 0 auto;
+  height: 300px;
+  border: 1px solid black;
+  overflow-y: scroll;
+  padding: 10px 50px;
+}
+
+.sending-message {
+  color: white;
+  background-color: rgba(0, 0, 255, 0.76);
+  width: fit-content;
+  border: 1px solid blue;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.receiving-message {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.76);
+  width: fit-content;
+  border: 1px solid red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 50px;
+}
+
+form {
+  width: 300px;
+  margin: 20px auto;
+}
+
+button {
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+
+.rooms {
+  width: 300px;
+  margin: 0 auto;
+}
