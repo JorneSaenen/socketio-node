@@ -3,6 +3,7 @@ const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const app = express();
+const path = require('path');
 
 const httpServer = createServer(app);
 const io = new Server(httpServer, {});
@@ -20,11 +21,11 @@ io.on('connection', (socket) => {
   });
 });
 
-app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  // Gewone html kan gebruikt worden omdat we geen templating engine nodig hebben om data  te injecteren
+  res.sendFile(path.join(__dirname, '/views/index.html'));
 });
 
 httpServer.listen(process.env.PORT, () =>
